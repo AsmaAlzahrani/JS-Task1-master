@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Selecting an Element!</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <ul class="container">
+      <li class="box" id="box-1"></li>
+      <li class="box box-to-select" id="box-2"></li>
+      <li class="box box-to-select" id="box-3"></li>
+      <li class="box box-to-select" id="box-4"></li>
+      <li class="box" id="box-5"></li>
+      <li class="box box-to-select-2" id="box-6"></li>
+      <li class="box box-to-select-2" id="box-7"></li>
+      <li class="box box-to-select-2" id="box-8"></li>
+    </ul>
+  </div>
+
+  <script>
+    //Get element by id
+    d1 = document.getElementById('box-1')
+    d1.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'red';
+    })
+    d2 = document.getElementById('box-2')
+    d2.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+    d3 = document.getElementById('box-3')
+    d3.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'yellow';
+    })
+    d4 = document.getElementById('box-4')
+    d4.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+    d5 = document.getElementById('box-5')
+    d5.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+    d6 = document.getElementById('box-6')
+    d6.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+    d7 = document.getElementById('box-7')
+    d7.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+    d8 = document.getElementById('box-8')
+    d8.addEventListener('click', function (event) {
+      event.currentTarget.style.backgroundColor = 'black';
+    })
+
+    //Get element by className
+    boxSelect1 = document.getElementsByClassName('box-to-select')
+    for (const element of boxSelect1) {
+      element.addEventListener('click', function (event) {
+        event.currentTarget.style.backgroundColor = 'yellow';
+      })
+    }
+    boxSelect2 = document.getElementsByClassName('box-to-select-2')
+    for (const element of boxSelect2) {
+      element.addEventListener('click', function (event) {
+        event.currentTarget.style.backgroundColor = 'blue';
+      })
+    }
+
+    //Iterate boxes through a For of loop to add functionallity
+    //Get Element with qeurySelector
+    var s = document.querySelector('lu')
+    console.log(s);
+    
+    //Get element by querySelectorAll
+    //Iterate boxes through a For of loop to add functionallity
+    var ss = document.querySelectorAll('li')
+    console.log(ss);
+  </script>
+</body>
+
+</html>
